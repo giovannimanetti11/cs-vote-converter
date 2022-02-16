@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<title>CoinSinergy Vote and Converter</title>
+<meta name="description" content="Coin widget">
+<meta name="author" content="CoinSinergy">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div id="container">
+        <div class="vote-box">
+            <div class="question-box">
+                <p>How do you feel about BTC this week?</p>
+                <span>Vote to see survey results.</span>
+            </div>
+            <div class="voting">
+                <div class="moon">
+                    <i class="fas fa-thumbs-up"></i> <span>Moon!</span>
+                </div>
+                <div class="dump">
+                    <i class="fas fa-thumbs-down"></i> <span>Dump!</span>
+                </div>
+            </div>
+        </div>
+        <div class="voting-results">
+            <div class="question-box">
+                <p>You've voted - <i class="fas fa-thumbs-up"></i> <span>Moon!</span></p>
+                <p>Your vote is until the end of the week - Sunday.</p>
+                <p>Come back next week to Vote again</p>
+            </div>
+            <div class="result-container">
+                <div class="result-bar">
+                    <div class="progress">
+                    </div>
+                </div>
+                <div class="perc-results">
+                    <div class="moon-percentage">
+                        <span>77% Moon!</span> <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <div class="dump-percentage">
+                        <span>23% Dump!</span> <i class="fas fa-thumbs-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="converter-box">
+            <div class="first-coin">
+                <div class="coin-ticker">
+                    <img src="img/bitcoin.svg" /> <span>BTC</span>
+                </div>
+                <ul class="dropdown">
+                    <li><a href="#">1INCH</a></li>
+                    <li><a href="#">4CHAN COIN</a></li>
+                    <li><a href="#">AAVE</a></li>
+                    <li><a href="#">AGRELLO</a></li>
+                    <li><a href="#">AIDOS KUNEEN</a></li>
+                    <li><a href="#">ALGORAND</a></li>
+                    <li><a href="#">AUGUR</a></li>
+                    <li><a href="#">AVALANCHE</a></li>
+                    <li><a href="#">AXIE INFINITY</a></li>
+                    <li><a href="#">BADGER DAO</a></li>
+                    <li><a href="#">BALANCER</a></li>
+                </ul>
+                <form>
+                    <input class="coinValue" />
+                </form>
+            </div>
+            <div class="second-coin">
+                <div class="coin-ticker">
+                    <img src="img/usa.svg" /> <span>USD</span>
+                </div>
+                <ul class="dropdown">
+                    <li><a href="#">AUD</a></li>
+                    <li><a href="#">CAD</a></li>
+                    <li><a href="#">CHF</a></li>
+                    <li><a href="#">EUR</a></li>
+                    <li><a href="#">GBP</a></li>
+                    <li><a href="#">JPY</a></li>
+                    <li><a href="#">USD</a></li>
+                </ul>
+                <form>
+                    <input class="coinValue" />
+                </form>
+            </div>
+            <div id="switch">
+                <i class="fas fa-exchange-alt"></i>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(".voting-results").hide();
+        $(".moon").click(function(){
+            $(".vote-box").hide();
+            $(".voting-results").show();
+        });
+
+        $('.first-coin .coin-ticker').click(function() {
+        if($('.first-coin .dropdown').is(':hidden')) {
+            $('.first-coin .dropdown').show()
+        }
+        else {
+            $('.first-coin .dropdown').hide()
+        }
+        });
+
+
+        $('.second-coin .coin-ticker').click(function() {
+        if($('.second-coin .dropdown').is(':hidden')) {
+            $('.second-coin .dropdown').show()
+        }
+        else {
+            $('.second-coin .dropdown').hide()
+        }
+        });
+
+    </script>
+</body>
+</html>
