@@ -162,6 +162,11 @@ body {
   border: 0;
 }
 
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
 .first-coin .coin-ticker,
 .second-coin .coin-ticker {
   padding: 0;
@@ -170,69 +175,13 @@ body {
   position: relative;
 }
 
-.first-coin .dropdown,
-.second-coin .dropdown {
-  position: absolute;
-  top: 25px;
-  background-color: #1e2233;
-  z-index: 99;
-  list-style-type: none;
-  text-align: left;
-  margin-left: 0;
-  padding-left: 0;
-  overflow-y: auto;
-  overflow-x: hidden;
-  display: none;
-  height: 200px;
-  width: 150px;
-  animation: fade 0.5s linear backwards;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-}
-
-.second-coin .dropdown {
-  top: 60px;
-}
-
-/*
-.first-coin .dropdown li a, .second-coin .dropdown li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 24px;
-}
-
-.first-coin .dropdown li:hover {
-    background-color: #0e1826;
-}
-
-.first-coin .dropdown li, .second-coin .dropdown li {
-	width: 170px;
-	float: none;
-	display: list-item;
-	position: relative;
-    padding-left: 25px;
-}
-*/
-
 .converter-box {
   position: relative;
 }
 
-#switch {
+#swap {
   position: absolute;
-  right: 25px;
+  right: 15px;
   top: 30px;
   transform: rotate(90deg);
   color: #6c93ff;

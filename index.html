@@ -8,6 +8,7 @@
 <meta name="author" content="CoinSinergy">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="style.css">
+
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
@@ -53,7 +54,7 @@
                 <div class="coin-ticker">
                     <img src="img/bitcoin.svg" />
                     <select id="crypto">
-                        <option value="BTC" label="BTC">BTC</option>
+                        
                         <option value="1INCH" label="1INCH">1INCH</option>
                         <option value="FCC" label="FCC">4CHAN COIN</option>
                         <option value="AAVE" label="AAVE">AAVE</option>
@@ -65,32 +66,33 @@
                         <option value="AXS" label="AXS">AXIE INFINITY</option>
                         <option value="BADGER" label="BADGER">BADGER DAO</option>
                         <option value="BAL" label="BAL">BALANCER</option>
+                        <option value="BTC" label="BTC" selected>BITCOIN</option>
                     </select>
                 </div>
                 
                 <form>
-                    <input type="text" id="valueCrypto" class="coinValue" />
+                    <input type="number" id="valueCrypto" class="coinValue" placeholder="0" value="1" />
                 </form>
             </div>
             <div class="second-coin">
                 <div class="coin-ticker">
                     <img src="img/usa.svg" />
                     <select id="fiat">
-                        <option value="USD">USD</option>
                         <option value="AUD">AUD</option>
                         <option value="CAD">CAD</option>
                         <option value="CHF">CHF</option>
                         <option value="EUR">EUR</option>
                         <option value="GBP">GBP</option>
                         <option value="JPY">JPY</option>
+                        <option value="USD" selected>USD</option>
                     </select>
                 </div>
                 
                 <form>
-                    <input type="text" id="valueFiat" class="coinValue" />
+                    <input type="number" id="valueFiat" class="coinValue" placeholder="0" value="1" />
                 </form>
             </div>
-            <div id="switch">
+            <div id="swap">
                 <i class="fas fa-exchange-alt"></i>
             </div>
         </div>
@@ -105,5 +107,6 @@
 
 
     </script>
+    <script src="js/functions.js"></script>
 </body>
 </html>
