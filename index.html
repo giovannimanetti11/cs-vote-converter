@@ -51,40 +51,43 @@
         <div class="converter-box">
             <div class="first-coin">
                 <div class="coin-ticker">
-                    <img src="img/bitcoin.svg" /> <span>BTC</span>
+                    <img src="img/bitcoin.svg" />
+                    <select id="crypto">
+                        <option value="BTC" label="BTC">BTC</option>
+                        <option value="1INCH" label="1INCH">1INCH</option>
+                        <option value="FCC" label="FCC">4CHAN COIN</option>
+                        <option value="AAVE" label="AAVE">AAVE</option>
+                        <option value="DLT" label="DLT">AGRELLO</option>
+                        <option value="ADK" label="ADK">AIDOS KUNEEN</option>
+                        <option value="ALGO" label="ALGO">ALGORAND</option>
+                        <option value="REP" label="REP">AUGUR</option>
+                        <option value="AVAX" label="AVAX">AVALANCHE</option>
+                        <option value="AXS" label="AXS">AXIE INFINITY</option>
+                        <option value="BADGER" label="BADGER">BADGER DAO</option>
+                        <option value="BAL" label="BAL">BALANCER</option>
+                    </select>
                 </div>
-                <ul class="dropdown">
-                    <li><a href="#">1INCH</a></li>
-                    <li><a href="#">4CHAN COIN</a></li>
-                    <li><a href="#">AAVE</a></li>
-                    <li><a href="#">AGRELLO</a></li>
-                    <li><a href="#">AIDOS KUNEEN</a></li>
-                    <li><a href="#">ALGORAND</a></li>
-                    <li><a href="#">AUGUR</a></li>
-                    <li><a href="#">AVALANCHE</a></li>
-                    <li><a href="#">AXIE INFINITY</a></li>
-                    <li><a href="#">BADGER DAO</a></li>
-                    <li><a href="#">BALANCER</a></li>
-                </ul>
+                
                 <form>
-                    <input class="coinValue" />
+                    <input type="text" id="valueCrypto" class="coinValue" />
                 </form>
             </div>
             <div class="second-coin">
                 <div class="coin-ticker">
-                    <img src="img/usa.svg" /> <span>USD</span>
+                    <img src="img/usa.svg" />
+                    <select id="fiat">
+                        <option value="USD">USD</option>
+                        <option value="AUD">AUD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="JPY">JPY</option>
+                    </select>
                 </div>
-                <ul class="dropdown">
-                    <li><a href="#">AUD</a></li>
-                    <li><a href="#">CAD</a></li>
-                    <li><a href="#">CHF</a></li>
-                    <li><a href="#">EUR</a></li>
-                    <li><a href="#">GBP</a></li>
-                    <li><a href="#">JPY</a></li>
-                    <li><a href="#">USD</a></li>
-                </ul>
+                
                 <form>
-                    <input class="coinValue" />
+                    <input type="text" id="valueFiat" class="coinValue" />
                 </form>
             </div>
             <div id="switch">
@@ -98,25 +101,8 @@
             $(".vote-box").hide();
             $(".voting-results").show();
         });
+		
 
-        $('.first-coin .coin-ticker').click(function() {
-        if($('.first-coin .dropdown').is(':hidden')) {
-            $('.first-coin .dropdown').show()
-        }
-        else {
-            $('.first-coin .dropdown').hide()
-        }
-        });
-
-
-        $('.second-coin .coin-ticker').click(function() {
-        if($('.second-coin .dropdown').is(':hidden')) {
-            $('.second-coin .dropdown').show()
-        }
-        else {
-            $('.second-coin .dropdown').hide()
-        }
-        });
 
     </script>
 </body>
